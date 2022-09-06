@@ -1,1 +1,1 @@
-# Employee Atrrition Predictor
+# Employee Attrition Predictor
