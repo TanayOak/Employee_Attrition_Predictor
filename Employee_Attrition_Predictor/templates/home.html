@@ -1,0 +1,119 @@
+<html>
+
+<head>
+	<title> Employee_Attrition </title>
+	<style>
+		*{font-size:30px;font-family:TimesNewRoman;background-color:LightBlue;}
+		hr.new1{ border-top:2px dashed black;width:40%;}
+		hr.new2{ border-top:2px dashed black;width:40%;}
+		hr.new3{ border-top:2px dashed black;width:40%;}
+		hr.new4{ border-top:2px dashed black;width:40%;}
+		hr.new5{ border-top:2px dashed black;width:40%;}
+		p{color:darkgreen}
+		input[type=submit]{
+		background-color:#4CAF50;
+		border-radius:12px;
+		color:white;
+		display:inline-block;}
+	</style>
+	<link rel="icon" href="image/student.png">
+</head>
+
+<body>
+
+<center>
+	<h1 style="color:Indigo";>Prediction of an employee leaving the company based on certain parameters </h1>
+</center>
+	<form method="POST" action="/logout">
+	<input type="submit" value="Logout" style="float:right;cursor:pointer;margin-right:100px;padding-left:20px;top:10px;"position:fixed;"></input>
+	<br><br>
+	</form>
+	
+<center>
+	<h1 style="font-style:italic;font-weight:bold;color:red;">Welcome {{name}}</h1>
+
+</center>
+
+<center>
+	<h2 style="color:DarkRed";>Employee Details: </h2>
+</center>
+	
+<center>
+	<form action="/check">
+
+	<hr class="new1">
+	<p style="color:MediumBlue";><b>Level of satisfaction: </b></p>
+	<input type="number" name="sl" step="0.01" value="0.50" style="text-align:center;" placeholder="enter a number" required>
+	<br>
+	<hr class="new2">
+
+	<p style="color:MediumBlue";><b>Final evaluation: </b></p>
+	<input type="number" name="le" step="0.01" value="0.50" style="text-align:center;" placeholder="enter a number" required>
+	<br>
+	<hr class="new3">
+
+	<p style="color:MediumBlue";><b>Number of projects worked on: </b></p>
+	<input type="number" name="npr" step="1" value="3" style="text-align:center;" placeholder="enter a number" required>
+	<br>
+	<hr class="new4">
+
+	<p style="color:MediumBlue";><b>Average Monthly Hours: </b></p>
+	<input type="number" name="amh" value="150" style="text-align:center;" placeholder="enter a number" required>
+	<br>
+	<hr class="new5">
+
+	<p style="color:MediumBlue";><b>Time Spent in Company: </b></p>
+	<input type="number" name="tsc" step="1" value="3" style="text-align:center;" placeholder="enter a number" required>
+	<br>
+	<hr class="new6">
+
+	<p style="color:MediumBlue";><b>Work Accidents if any: </b></p>
+	<input type="number" name="wa" step="1" value="0" style="text-align:center;" placeholder="enter a number" required>
+	<br>
+	<hr class="new7">
+
+	<p style="color:MediumBlue";><b>Promotions in last 5 years: </b></p>
+	<input type="number" name="promo5" step="1" value="0" style="text-align:center;" placeholder="enter a number" required>
+	<br>
+	<hr class="new8">
+
+	<p style="color:MediumBlue";><b>Choose Department: </b></p>
+	<input type="radio" name="dt" value="a" required> IT </input>
+	<input type="radio" name="dt" value="b" required> RandD </input>
+	<input type="radio" name="dt" value="c" required> Accounting </input>
+	<br>
+	<input type="radio" name="dt" value="d" required> HR </input>
+	<input type="radio" name="dt" value="e" required> Management </input>
+	<input type="radio" name="dt" value="f" required> Marketing </input>
+	<br>
+	<input type="radio" name="dt" value="g" required> Sales </input>
+	<input type="radio" name="dt" value="h" required> Product Management </input>
+	<br>
+	<input type="radio" name="dt" value="i" required> Support </input>
+	<input type="radio" name="dt" value="j" required> Technical </input>
+	<br>
+	<hr class="new9">
+
+	<p style="color:MediumBlue";><b>Salary: </b></p>
+	<input type="radio" name="sa" value="a" required> High </input>
+	<input type="radio" name="sa" value="b" required> Low </input>
+	<input type="radio" name="sa" value="c" required> Medium </input>
+	<br>
+	<hr class="new10">
+	<br>
+
+	<input type="Submit" value="Submit Response" style="cursor:pointer";></input>
+	</form>
+</center>
+	
+<center>
+	<center>
+	<h3>Has the employee left ? </h3>			
+	<br>		
+	{{msg}}
+	<br>
+	<h4> ** [1] = Yes & [0] = No ** </h4>
+</center>
+</body>
+
+

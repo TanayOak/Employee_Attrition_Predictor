@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Employee_Attrition </title>
+	<style>
+		*{font-size:30px;font-family:TimesNewRoman;}
+		body{background-color:Yellow;}
+		
+		input[type=submit]{
+		background-color:lightgreen;
+		border-radius:12px;
+		color:black;
+		display:inline-block;}
+
+		input[type=text]{
+		background-color:white;
+		border-radius:12px;
+		color:black;
+		display:inline-block;}
+
+		input[type=password]{
+		background-color:white;
+		border-radius:12px;
+	
+		display:inline-block;}
+	</style>
+	<link rel="icon" href="image/student.png">
+
+</head>
+<body>
+<center>
+<h1 style="font-style:italic;font-weight:bold;color:red;">Signup Page</h1>
+<form method="POST" action="/signup">
+<input type="text" name="un" placeholder="enter username" required>
+<br><br>
+<input type="password" name="pw1" placeholder="enter password" required>
+<br><br>
+<input type="password" name="pw2" placeholder="confirm password" required>
+<br><br>
+<input type="submit" value="Register" style="cursor:pointer";>
+<br><br>
+</form>
+<a href="{{url_for('login')}}">Login</a>
+<br><br>
+{{msg}}
+</center>
+</body>
+
+</html>
