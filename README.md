@@ -21,12 +21,22 @@ Understanding the problem
 
 6. This is a Binary Classification Problem
 
-The aim of this project is to predict the chances of an employee leaving the company using people charm dataset, where there are certain parameters given to design an appropriate prediction model based on the employee's performance and the privilages he/she gets from the organization. For simplicity sake, the prediction model which I have used here is Random Forest Classifier which has the prediction score of 98.6.
+The aim of this project is to predict the chances of an employee leaving the company using people charm dataset, where there are certain parameters given to design an appropriate prediction model based on the employee's performance and the privilages he/she gets from the organization.
+
+![image](https://github.com/user-attachments/assets/5b30a944-48f9-4f32-bb15-90fab9e9c35f)
+
+Here's how the Random Forest Classifier will analyze the data and the factors affecting attrition:
+
+![image](https://github.com/user-attachments/assets/dc285f7d-2775-45b0-bb5a-995ac85f76d5)
+
+
+With Random Forest Classifier we were able to get a precision score of 98.6.
 
 ![score](https://user-images.githubusercontent.com/88525549/189329087-a12216a6-2b62-4701-89e7-16bffe6f9dd4.png)
 
-The project was  developed and deployed as an web-app using flask. Flask is a micro framework for web-applications writtenin python.
-It consists of features such as login and signup, forgot password option, authentications and the on the spot result declaration. 
+
+Thus the model was created and deployed as a web-app using flask with acount and email authentications using gmail API. 
+The model prediction is done on the spot along with result declaration.
 
 1. Login Page where the user logins themselves with username and password they sign-uped. If the user is not registered and tries to login-error, the page will display an error message saying: "the user doesn't exists ".
 
